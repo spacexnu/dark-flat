@@ -3,9 +3,9 @@
 
 name = "Dark Flats"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
+licenselink = "https://github.com/adlermedrado/dark-flat/blob/master/LICENSE"
+description = "My simple and personal Hugo Theme"
+homepage = "http://adlermedrado.com/"
 tags = []
 features = []
 min_version = "0.41.0"
