@@ -118,6 +118,17 @@ em {
     font-style: italic;
 }
 
+.error_not_found {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.error_not_found p {
+    font: normal bold 1.2rem Consolas, monospace;
+    text-align: center;
+}
+
 .line_break::after {
     content: "\a";
     white-space: pre;
