@@ -129,6 +129,10 @@ em {
     text-align: center;
 }
 
+.gpg_signed_info p {
+    font-size: x-small;
+}
+
 .line_break::after {
     content: "\a";
     white-space: pre;
