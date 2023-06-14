@@ -98,7 +98,7 @@ strong {
     font-size: 40%;
 }
 
-code::after {
+.highlight::after {
     content: "\a";
     white-space: pre;
 }
