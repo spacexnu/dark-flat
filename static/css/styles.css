@@ -8,6 +8,11 @@ body, html {
     color: #d0d0d0;
     line-height: 1.8;
     font-size: 18px;
+    /* Leve textura hacker/cypherpunk elegante */
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: pulseBackground 10s infinite;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -82,4 +87,20 @@ hr {
     body {
         font-size: 16px;
     }
+}
+
+@keyframes pulseBackground {
+    0% {
+        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.015) 0%, transparent 70%);
+    }
+    50% {
+        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    }
+    100% {
+        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.015) 0%, transparent 70%);
+    }
+}
+
+body, html {
+    animation: pulseBackground 10s infinite;
 }
