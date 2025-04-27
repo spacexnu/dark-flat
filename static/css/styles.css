@@ -194,3 +194,38 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
         background-size: cover;
     }
 }
+
+
+/* --- Markdown Table Styling --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2em 0;
+    font-family: 'Fira Code', monospace;
+}
+
+th, td {
+    border: 1px solid #00ffc3;
+    padding: 10px;
+    text-align: left;
+    color: #d0d0d0;
+}
+
+th {
+    background-color: #1a1a1a;
+    color: #00ffc3;
+}
+
+.cursor-blink {
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: 300;
+    color: #00ffc3;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
