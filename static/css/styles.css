@@ -117,3 +117,47 @@ body, html {
 a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     animation: glitch 0.4s linear;
 }
+/* --- navbar_right cypherpunk menu --- */
+.navbar_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar_right a {
+    color: #00ffc3;
+    text-transform: lowercase;
+    border: none;
+    font-family: 'Fira Code', monospace;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar_right a:hover {
+    color: #ffffff;
+}
+
+.navbar_right a:not(:last-child)::after {
+    content: "|";
+    color: #00ffc3;
+    opacity: 0.5;
+    margin-left: 10px;
+}
+
+
+@keyframes navbarBoot {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar_right_animated {
+    animation: navbarBoot 1s ease-out;
+}
