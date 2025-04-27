@@ -12,7 +12,7 @@ body, html {
     background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
     background-repeat: no-repeat;
     background-size: cover;
-    animation: pulseBackground 10s infinite;
+    animation: pulseBackground 10s infinite, backgroundGlitch 7s infinite;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -101,9 +101,7 @@ hr {
     }
 }
 
-body, html {
-    animation: pulseBackground 10s infinite;
-}
+
 
 @keyframes glitch {
     0% { transform: none; }
@@ -152,6 +150,18 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
         opacity: 0;
         transform: translateY(-20px);
     }
+    20% {
+        opacity: 0.6;
+    }
+    40% {
+        opacity: 0.2;
+    }
+    60% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.5;
+    }
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -160,4 +170,27 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 
 .navbar_right_animated {
     animation: navbarBoot 1s ease-out;
+}
+
+@keyframes backgroundGlitch {
+    0% {
+        background-position: center;
+        background-size: cover;
+    }
+    25% {
+        background-position: 48% 52%;
+        background-size: 102%;
+    }
+    50% {
+        background-position: 52% 48%;
+        background-size: 98%;
+    }
+    75% {
+        background-position: 50% 50%;
+        background-size: 101%;
+    }
+    100% {
+        background-position: center;
+        background-size: cover;
+    }
 }
