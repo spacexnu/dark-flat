@@ -94,6 +94,11 @@ pre, code {
     animation: none !important;
     min-height: 1em;
     text-shadow: none;
+    position: relative;
+    z-index: 2;
+    isolation: isolate;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 hr {
