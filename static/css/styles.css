@@ -92,8 +92,8 @@ pre, code {
     box-sizing: border-box;
     background-image: none !important;
     animation: none !important;
-    text-shadow: 0 0 5px #00ffc3;
     min-height: 1em;
+    text-shadow: none;
 }
 
 hr {
