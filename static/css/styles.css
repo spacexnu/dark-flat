@@ -121,6 +121,7 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
+    padding: 0 50px;
 }
 
 .navbar_right a {
