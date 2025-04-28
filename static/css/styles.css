@@ -77,7 +77,7 @@ button:hover, .button:hover {
     box-sizing: border-box;
 }
 
-pre, code {
+pre {
     background-color: #121212;
     color: #00ffc3;
     padding: 20px 24px;
@@ -95,6 +95,21 @@ pre, code {
     text-shadow: none;
     position: relative;
     z-index: 2;
+}
+
+pre code {
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    display: block;
+    overflow: auto;
+}
+
+p code, li code, h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    background-color: #1a1a1a;
 }
 
 hr {
