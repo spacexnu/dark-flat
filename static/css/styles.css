@@ -8,7 +8,6 @@ body, html {
     color: #d0d0d0;
     line-height: 1.8;
     font-size: 18px;
-    /* Leve textura hacker/cypherpunk elegante */
     background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
     background-repeat: no-repeat;
     background-size: cover;
@@ -63,7 +62,14 @@ button:hover, .button:hover {
 .container {
     max-width: 1100px;
     margin: auto;
-    padding: 40px 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.container, .navbar_right, main, footer {
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
 }
 
 pre, code {
@@ -86,6 +92,11 @@ hr {
 @media (max-width: 768px) {
     body {
         font-size: 16px;
+    }
+
+    .container, .navbar_right, main, footer {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -118,10 +129,9 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
 /* --- navbar_right cypherpunk menu --- */
 .navbar_right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 0 50px;
 }
 
 .navbar_right a {
@@ -202,7 +212,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 2em 0;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 th, td {
