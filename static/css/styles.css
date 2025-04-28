@@ -121,6 +121,7 @@ hr {
         align-items: flex-start;
         gap: 10px;
         padding-top: 20px;
+        animation: navbarBoot 1s ease-out;
     }
 
     .navbar_right a {
@@ -169,12 +170,16 @@ hr {
 a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     animation: glitch 0.4s linear;
 }
-/* --- navbar_right cypherpunk menu --- */
+
 .navbar_right {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    animation: navbarBoot 1s ease-out;
 }
 
 .navbar_right a {
@@ -220,10 +225,6 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-.navbar_right_animated {
-    animation: navbarBoot 1s ease-out;
 }
 
 @keyframes backgroundGlitch {
