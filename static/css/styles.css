@@ -14,9 +14,7 @@ body, html {
     /* animação removida do body */
 }
 
-.background-glitch {
-    display: none;
-}
+/* Removed unused .background-glitch class */
 
 h1, h2, h3, h4, h5, h6 {
     color: #00ffc3;
@@ -53,7 +51,6 @@ button, .button {
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     border-radius: 4px;
     font-family: 'Fira Code', monospace;
-    color: #00ffc3;
     text-shadow: 0 0 3px rgba(0, 255, 195, 0.8);
 }
 
@@ -77,8 +74,6 @@ button:hover, .button:hover {
 }
 
 .navbar_left {
-    padding-left: 50px;
-    padding-right: 50px;
     box-sizing: border-box;
 }
 
@@ -94,15 +89,12 @@ pre, code {
     white-space: pre-wrap;
     word-break: break-word;
     box-sizing: border-box;
-    background-image: none !important;
-    animation: none !important;
+    background-image: none;
+    animation: none;
     min-height: 1em;
     text-shadow: none;
     position: relative;
     z-index: 2;
-    isolation: isolate;
-    transform: translateZ(0);
-    will-change: transform;
 }
 
 hr {

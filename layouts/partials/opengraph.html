@@ -1,11 +1,25 @@
-{{- if .IsPage }}
+<!-- Open Graph tags -->
 <meta property="og:title" content="{{ .Title }}">
-<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}">
-<meta property="og:type" content="article">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ .Site.Title }}">
+{{ if .IsPage }}
+<meta property="og:type" content="article">
+{{ else }}
+<meta property="og:type" content="website">
+{{ end }}
 {{ with .Params.images }}
 <meta property="og:image" content="{{ index . 0 }}">
 {{ else }}
-<meta property="og:image" content="https://adlermedrado.com.br/images/default-og-image.png">
+<meta property="og:image" content="/images/default-og-image.png">
 {{ end }}
-{{- end }}
+
+<!-- Twitter Card tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}">
+{{ with .Params.images }}
+<meta name="twitter:image" content="{{ index . 0 }}">
+{{ else }}
+<meta name="twitter:image" content="/images/default-og-image.png">
+{{ end }}
