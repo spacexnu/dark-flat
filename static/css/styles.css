@@ -81,11 +81,14 @@ button:hover, .button:hover {
 pre, code {
     background-color: #2a2a2a;
     color: #00ffc3;
-    padding: 12px 16px;
+    padding: 18px 20px;
     border-radius: 5px;
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
     overflow-x: auto;
     font-size: 16px;
+    line-height: 1.6;
+    white-space: pre;
+    box-sizing: border-box;
 }
 
 hr {
