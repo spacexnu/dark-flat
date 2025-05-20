@@ -2,7 +2,7 @@
 {{ .Content }}
 
 <section class="latest-posts">
-  <h2>Latest Posts</h2>
+  <h2>Latest Logs</h2>
   <ul>
     {{ $posts := where .Site.RegularPages "Type" "posts" }}
     {{ range first 10 (sort $posts "Date" "desc") }}
