@@ -19,6 +19,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 2em;
     margin-bottom: 1em;
     text-shadow: 0 0 6px rgba(0, 255, 195, 0.6);
+    transition: all 0.3s ease;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+    animation: glitchRGB 0.5s linear;
 }
 
 a {
@@ -32,6 +37,7 @@ a:hover {
     color: #ffffff;
     border-bottom: 1px solid #ffffff;
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.4);
+    animation: glitch 0.4s linear;
 }
 
 p {
@@ -118,10 +124,7 @@ hr {
 }
 
 @media (max-width: 1024px) {
-    body {
-        font-size: 17px;
-    }
-
+    body { font-size: 17px; }
     .container, .navbar_right, .navbar_left, main, footer {
         padding-left: 30px;
         padding-right: 30px;
@@ -129,15 +132,11 @@ hr {
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 16px;
-    }
-
+    body { font-size: 16px; }
     .container, .navbar_right, .navbar_left, main, footer {
         padding-left: 20px;
         padding-right: 20px;
     }
-
     .navbar_right {
         flex-direction: column;
         align-items: flex-start;
@@ -145,40 +144,23 @@ hr {
         padding-top: 20px;
         animation: navbarBoot 1s ease-out;
     }
-
-    .navbar_right a {
-        font-size: 16px;
-    }
+    .navbar_right a { font-size: 16px; }
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 15px;
-    }
-
+    body { font-size: 15px; }
     .container, .navbar_right, .navbar_left, main, footer {
         padding-left: 15px;
         padding-right: 15px;
     }
-
-    .navbar_right a {
-        font-size: 14px;
-    }
+    .navbar_right a { font-size: 14px; }
 }
 
 @keyframes pulseBackground {
-    0% {
-        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.015) 0%, transparent 70%);
-    }
-    50% {
-        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
-    }
-    100% {
-        background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.015) 0%, transparent 70%);
-    }
+    0% { background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.015) 0%, transparent 70%); }
+    50% { background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%); }
+    100% { background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.015) 0%, transparent 70%); }
 }
-
-
 
 @keyframes glitch {
     0% { transform: none; }
@@ -189,8 +171,13 @@ hr {
     100% { transform: none; }
 }
 
-a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
-    animation: glitch 0.4s linear;
+@keyframes glitchRGB {
+    0% { transform: translate(0); }
+    20% { transform: translate(-1px, 1px) rotate(0.2deg) scale(1.01); filter: hue-rotate(10deg); }
+    40% { transform: translate(1px, -1px) rotate(-0.2deg) scale(0.99); filter: hue-rotate(-10deg); }
+    60% { transform: translate(-1px, 1px); }
+    80% { transform: translate(1px, -1px); }
+    100% { transform: translate(0); }
 }
 
 .navbar_right {
@@ -225,55 +212,23 @@ a:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
     margin-left: 10px;
 }
 
-
 @keyframes navbarBoot {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    20% {
-        opacity: 0.6;
-    }
-    40% {
-        opacity: 0.2;
-    }
-    60% {
-        opacity: 0.8;
-    }
-    80% {
-        opacity: 0.5;
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    0% { opacity: 0; transform: translateY(-20px); }
+    20% { opacity: 0.6; }
+    40% { opacity: 0.2; }
+    60% { opacity: 0.8; }
+    80% { opacity: 0.5; }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes backgroundGlitch {
-    0% {
-        background-position: center;
-        background-size: cover;
-    }
-    25% {
-        background-position: 48% 52%;
-        background-size: 102%;
-    }
-    50% {
-        background-position: 52% 48%;
-        background-size: 98%;
-    }
-    75% {
-        background-position: 50% 50%;
-        background-size: 101%;
-    }
-    100% {
-        background-position: center;
-        background-size: cover;
-    }
+    0% { background-position: center; background-size: cover; }
+    25% { background-position: 48% 52%; background-size: 102%; }
+    50% { background-position: 52% 48%; background-size: 98%; }
+    75% { background-position: 50% 50%; background-size: 101%; }
+    100% { background-position: center; background-size: cover; }
 }
 
-
-/* --- Markdown Table Styling --- */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -302,11 +257,9 @@ th {
 }
 
 @keyframes blink {
-    50% {
-        opacity: 0;
-    }
+    50% { opacity: 0; }
 }
-/* --- Glitch Zone Styling --- */
+
 .glitch-zone {
     position: relative;
     background-color: #121212;
@@ -327,7 +280,7 @@ th {
 
 .badge-a-plus {
     display: inline-block;
-    background-color: #2e7d32; /* Verde escuro tipo o da imagem */
+    background-color: #2e7d32;
     color: white;
     font-weight: bold;
     font-family: sans-serif;
